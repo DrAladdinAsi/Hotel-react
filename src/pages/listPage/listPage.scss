@@ -1,0 +1,50 @@
+@import'../../responsive.scss';
+
+.listPage_Hotel{
+  
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+
+    @include md{
+     flex-direction: column;
+  }
+
+  
+
+    .theTextPart_listPage{
+
+      flex: 3;
+   
+      .wrapper{
+        padding-right: 2rem;
+        
+      }
+      .search_icon12{
+        background-color: hsl(199,100%,33%);
+      }
+      
+
+      overflow-y: scroll;
+      padding-bottom: 3rem;
+
+      @include md{
+        flex: none;
+        height: 60%;
+     }
+   
+    }
+
+    .theMapPart_listPage{
+      flex: 2;
+      background-color: rgb(255, 241, 244);
+      height: 100%;
+      width: 100%;
+
+      @include md{
+        flex: none;
+     }
+  
+      .map{height: 100%;}
+    }
+}

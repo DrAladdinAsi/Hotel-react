@@ -1,0 +1,247 @@
+@import '../../responsive.scss';
+
+.singlePage{
+    
+    display: flex;
+
+    @include md {
+        flex-direction: column;
+        overflow-y: scroll;
+    }
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+
+ 
+
+  
+    
+    .article{
+        padding-top: 1rem;
+        padding-bottom: 1.2rem;
+        flex: 3;
+        overflow-y: scroll;
+
+        @include md {
+            flex: none;
+        }
+
+        .wrapper{
+            padding:1rem 2rem ;
+            display: flex;
+            flex-direction: column;
+            gap: 1.4rem;
+            @include sm {
+                gap: 2rem;
+            }
+
+            .info{
+                display: flex;
+                justify-content: space-between;
+                
+                width: 100%;
+                
+                .post{
+                    display: flex;
+                    flex-direction: column;
+                    gap: .8rem;
+                    .title_post{
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                    }
+
+                    .location_post{
+                        display: flex;
+                        align-items: center;
+                        gap: .5rem;
+                        img{
+                            width: 1rem;
+                            height: 1rem;
+                        }
+                        span{
+                            font-size: .9rem;
+                            color: rgb(155, 155, 155);
+                        }
+                    }
+
+                    .price_singlePage{
+                        background-color: rgb(253, 232, 135);
+                        width: max-content;
+                        border-radius: .3rem;
+                        padding: 0 .7rem;
+                        color: rgb(95, 95, 95);
+                    
+                    }
+                }
+
+                .user{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: rgb(253, 232, 135);
+                    border-radius: .4rem;
+                    padding: 1.5rem;
+                    gap: .6rem;
+                    img{
+                        width: 3.5rem;
+                        height: 3.5rem;
+                        object-fit: cover;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            .desc{
+                font-size: .9rem;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    .features_singlePage{
+        
+        flex: 2;
+        height: 100%;
+        @include md{
+            flex: none;
+            height: max-content;
+        }
+        background-color: rgb(255, 241, 244);
+        padding-bottom: 2rem;
+
+        .wrapper{
+  
+            @include md {
+                overflow-y:none;
+            }
+            padding: 0 1rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+
+            .title{
+                font-size: 1rem;
+                font-weight: 600;
+                margin-bottom: .5rem;
+            }
+            img{
+                width: 1.4rem;
+                height: 1.4rem;
+                object-fit: cover;
+            }
+
+            .gernerals{
+                display: flex;
+                flex-direction: column;
+                .listVerticale{
+                    display: flex;
+                    flex-direction: column;
+                    gap: .6rem;
+                    background-color: white;
+                    padding: 1rem;
+                    border-radius: .6rem;
+                }
+            }
+
+            .listItem{
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+
+                .text{
+                    line-height: 1.4rem;
+                    display: flex;
+                    flex-direction: column;
+                    .item_name{
+                      font-size: .9rem;
+                      font-weight: 600;
+                    }
+                    .item_desc{
+                        font-size: .8rem;
+                    }
+                }
+            }
+
+            .sizes{
+                margin: 1.6rem 0;
+                .sizeItems{
+                    display: flex;
+                    gap: 2rem;
+                    margin-top: .5rem;
+
+                    .size_item{
+                        display: flex;
+                        gap: .5rem;
+                        align-items: center;
+                        background-color: white;
+                        padding: .5rem;
+                        border-radius: .4rem;
+                        span{
+                            font-size: .8rem;
+                        }
+                    }
+                }
+            }
+
+            .Nearby_places{
+                margin: 1rem 0;
+                height: fit-content ;
+                
+                .listHersiontal{
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 1rem;
+                    background-color: white;
+                    padding: .8rem;
+
+                    .listItem{
+                              gap: .7rem;
+                              img{
+                                width: 1.6rem;
+                                height: 1.6rem;
+                              }
+                              .text{
+                                line-height: 1.2rem;
+                              }
+                             }
+                }
+            }
+
+            .location{
+                width: 100%;
+                margin-bottom: 1rem;
+                height: 20rem;
+           
+                .map_location{
+                    height: 100%;
+                    width: 100%;
+                    
+                }
+            }
+
+            .buttons{
+                margin: 1rem 0;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 2rem;
+                .button_sp{
+                    cursor: pointer;
+                    display: flex;
+                    gap: .4rem;
+                    background-color: white;
+                    padding: 1.2rem;
+                    border: 1px solid rgb(253, 210, 217);
+                    border-radius: .4rem;
+                    img{
+                        width: 1.2rem;
+                        height: 1.2rem;
+                    }
+                    span{
+                        font-size: .8rem;
+                    }
+                }
+            }
+        }
+    }
+
+}

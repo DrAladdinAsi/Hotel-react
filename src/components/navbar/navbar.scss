@@ -1,0 +1,161 @@
+@import'../../responsive.scss';
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 2.5rem;
+    
+    a{
+        transition: all 0.1s ease;
+        &:hover{
+            scale: 1.06;
+        }
+
+     @include sm{
+        display: none;
+     }
+    }
+
+    .left{
+        display: flex;
+        align-items: center;
+        gap: 1.8rem;
+        flex: 3;
+
+        .logo{
+            display: flex;
+            align-items: center;
+            gap: .3rem;
+
+            img{
+                width: 2.1rem;
+            }
+            span{
+                @include md{
+                    display: none;
+                 }
+                 @include sm{
+                    display: initial;
+                 }
+            }
+        }
+    }
+
+    .right{
+        display: flex;
+        align-items: center;
+        background-color: rgb(255, 241, 244);
+        height: 100%;
+        flex: 2.1;
+        justify-content: flex-end;
+        border-radius: .2rem;
+
+        .userProfile{
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            margin-right: 2rem;
+
+            height: 100%;
+            img{
+                width: 2rem;
+                height:2rem;
+                border-radius: 50%;
+                object-fit: cover;
+                @include sm{
+                    margin-right: 1rem;
+                }
+            }
+
+            span{
+                font-size: .9rem;
+                @include sm{
+                    display: none;
+                }
+            }
+
+            .button{
+                background-color: rgb(228, 216, 47);
+                padding:.3rem .5rem;
+                position: relative;
+               
+                .notifacation{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    top: -.3rem;
+                    right: -.7rem;
+                    background-color: #ff7474;
+                    padding:.01rem .4rem;
+                    border-radius: 50%;
+                    color: white;
+                   
+
+                    span{
+                        font-size:.8rem ;
+                    }
+                }
+            }
+        }
+
+        @include md{
+            background-color: transparent;
+         }
+         
+        a{
+            padding: .4rem 1rem;
+            margin: 1rem;
+        }
+
+        .register{
+            background-color: rgb(231, 191, 59);
+            border-radius: .2rem;
+        }
+    
+        .menu_icon{
+            display: none;
+            cursor: pointer;
+            z-index: 999;
+            @include sm{
+                display: inline;
+             }
+            img{
+                width: 1.5rem;
+                margin-top: .3rem;
+            }
+        }
+
+        .menu{
+            position: absolute;
+            top: 0;
+            right: -50%;
+            background-color: black;
+            width: 50%;
+            height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: .9rem;
+            transition: all 1s ease;
+            
+            &.active{
+                right: 0;
+            }
+            
+            @include sm{
+                z-index: 888;
+                a{
+                 display: initial;
+                }
+             }
+             a{
+               margin: .6rem 0;
+             }
+        }
+    
+    }
+}
