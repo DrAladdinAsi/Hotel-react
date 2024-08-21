@@ -194,6 +194,10 @@
                     background-color: white;
                     padding: .8rem;
 
+                    @include md {
+                      flex-wrap: wrap;
+                    }
+
                     .listItem{
                               gap: .7rem;
                               img{
